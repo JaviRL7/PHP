@@ -7,6 +7,7 @@
     <title>Ejercicio Tabla del 2 de 3 formas</title>
 </head>
 <body>
+    <h1>Tabla del 2 con while</h1>
    <?php
    $x=0;
    $base=2;
