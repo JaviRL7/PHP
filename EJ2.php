@@ -11,7 +11,7 @@
    $x=0;
    $base=2;
    while ($x<=10){
-       echo $base* $x. "<br/>";
+       echo $base. ' * ' .$x. '=' .$base* $x. "<br/>";
        $x++;
 
    }
