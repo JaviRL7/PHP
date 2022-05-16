@@ -19,7 +19,7 @@
     <br>
     <p>Credito cliente: <input id="credito" type="int" name="credito"/></p>
     <br>
-    <p>Ciudad cliente: <input id="credito" type="int" name="ciudad"/></p>
+    <p>Ciudad cliente: <input id="ciudad" type="int" name="ciudad"/></p>
     <br>
     <p>dni cliente: <input id="dni" type="text" name="dni"/></p>
     <p><input type="submit" value="Enviar"/></p>
