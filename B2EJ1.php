@@ -8,12 +8,12 @@
 </head>
 <body>
 <h1>Ejercicio 1 bloque 2</h1>
-<form action="./EJ3v2.php" method="get">
+<form action="./B2EJ1v2.php" method="get">
     <p>Codigo cliente: <input id="cod_cliente" type="int" name="cod"/></p>
     <br>
     <p>Nombre cliente: <input id="nombrecliente" type="text" name="nombre"/></p>
     <br>
-    <p>Apellido 1 cliente: <input id="apellido1" type="text" name="apellido2"/></p>
+    <p>Apellido 1 cliente: <input id="apellido1" type="text" name="apellido1"/></p>
     <br>
     <p>Apellido 2 cliente: <input id="apellido2" type="text" name="apellido2"/></p>
     <br>

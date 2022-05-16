@@ -9,7 +9,16 @@
 <body>
     <h1>Conexion con Postgres</h1>
     <?php
-         $dsn = 'pgsql:dbname=magarciadb;host=localhost;port=5432';
+        $dsn = 'pgsql:dbname=jrodrigue_fact;host=192.168.56.101;port=5432';
+        $user = 'jrodriguez';
+        $password = '1*pharmaton';
+        try{
+            $pdo = new PDO( $dsn, $user, $password);
+            echo 'Conexión Correcta';
+            } 
+            catch( PDOException $e ) {
+            echo 'Error al conectarnos: '.$e->getMessage();
+            }
         ?>
 </body>
 </html>
