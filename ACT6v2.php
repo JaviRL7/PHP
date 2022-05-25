@@ -24,8 +24,17 @@
         $apellido1 = $_REQUEST['apellido1'];
         $apellido2 = $_REQUEST['apellido2'];
         /*comando*/
-        $query = "SELECT * FROM CLIENTE WHERE nombre = '$nombre' and apellido1= '$apellido1' and apellido2= '$apellido2'";
+        if ($nombre != "" and $apellido1!="" and $apellido2!=""){$query = "SELECT * FROM CLIENTE WHERE upper(nombre) LIKE ('%'|| '$nombre' ||'%') and upper(apellido1) LIKE ('%'|| '$apellido1' ||'%') and upper(apellido2) LIKE ('%'|| '$apellido2' ||'%')";}
+        if ($nombre != "" and $apellido1!="" and $apellido2==""){$query = "SELECT * FROM CLIENTE WHERE upper(nombre) LIKE ('%'|| '$nombre' ||'%') and upper(apellido1) LIKE ('%'|| '$apellido1' ||'%')";}
+        if ($nombre != "" and $apellido2!="" and $apellido1==""){$query = "SELECT * FROM CLIENTE WHERE upper(nombre) LIKE ('%'|| '$nombre' ||'%') and upper(apellido2) LIKE ('%'|| '$apellido2' ||'%')";}
+        if ($apellido1 != "" and $apellido2!="" and $nombre==""){$query = "SELECT * FROM CLIENTE WHERE upper(apellido1) LIKE ('%'|| '$apellido1' ||'%') and upper(apellido2) LIKE ('%'|| '$apellido2' ||'%')";}
+        if ($nombre != "" and $apellido1=="" and $apellido2==""){$query = "SELECT * FROM CLIENTE WHERE upper(nombre) LIKE ('%'|| '$nombre' ||'%')";}
+        if ($apellido1!="" and $apellido2=="" and $nombre==""){$query = "SELECT * FROM CLIENTE WHERE upper(apellido1) LIKE ('%'|| '$apellido1' ||'%')";}
+        if ($apellido2!="" and $nombre=="" and $apellido1==""){$query = "SELECT * FROM CLIENTE WHERE upper(apellido2) LIKE ('%'|| '$apellido2' ||'%')";}
+        if ($nombre == "" and $apellido1 =="" and $apellido2==""){$query = "SELECT * FROM CLIENTE";}
         $results = $pdo->query($query);
+        /*$query = "SELECT * FROM CLIENTE WHERE nombre = '$nombre' and apellido1= '$apellido1' and apellido2= '$apellido2'";*/
+        /*$results = $pdo->query($query);*/
         /*Depuracion*/
         echo "<table border='1'>\n";
         echo "<tr>\n";
