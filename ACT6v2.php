@@ -18,7 +18,7 @@
             catch( PDOException $e ) {
             echo 'Error al conectarnos: '.$e->getMessage();
             }
-        /* Datos del forulario */
+        /* Datos del forulario  EN EL IF SE PUEDE PONER IF ($NOMBRE)...SI EXISTE ES VERDADERO*/ 
         
         $nombre = $_REQUEST['nombre'];
         $apellido1 = $_REQUEST['apellido1'];
